@@ -9,4 +9,10 @@ export class HomePage {
 
   constructor() {}
 
+  variable = "Hola, esto es un texto";
+  nombre:string = "Bastian";
+
+  cambiarNombre() {
+    this.nombre = "Braulio";
+  }
 }
