@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>uno</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-back-button></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title size="large">uno</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-content>
+
+<ion-content>
+  <ion-label>{{dato}}</ion-label>
+  <ion-fab horizontal="center" slot="fixed" vertical="bottom">
+    <ion-fab-button>
+      <ion-icon name="image-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

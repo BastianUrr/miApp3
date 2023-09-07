@@ -1,20 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Blank </ion-title>
   </ion-toolbar>
+  
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-buttons slot="end">
+        <ion-back-button></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title size="large" class="container">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!-- 
+  ! Rojo para alertas
+todo: Algo por hacer en el futuro
+? Azul
+* Grisaceo
+-->
+
+  <ion-label>Texto:</ion-label>
+  <ion-input type="text" [(ngModel)]="texto" (ngModelChange)="cambia()"></ion-input>
+  <ion-label>Resultado... {{texto}}</ion-label>
+  <app-c1></app-c1>
+  <ion-button routerLink="/uno" expand="block" (click)="enviarDato()">Ir a la página uno.</ion-button>
+
+  <ion-input label="Contador" labelPlacement="floating" [counter]="true" minlength="3" min="3" maxlength="8"></ion-input>
+  <h5>Lista de usuarios...</h5>
+  <div *ngFor="let x of usuario">
+    {{x.id}}: {{x.nombre}}
   </div>
+
 </ion-content>
+
+<div>
+  <p></p>
+</div>
